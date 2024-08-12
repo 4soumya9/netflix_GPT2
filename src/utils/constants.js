@@ -8,8 +8,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4Y2M5ZTRlNmFiNzIzZmNlOTk4MWQzNjY4YzlmNmQzZCIsIm5iZiI6MTcyMjAwNzg2NS4yMDQ4MjksInN1YiI6IjY0MmIyYmM2YzBhMzA4MDBkM2I5YzI3YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.81IRo1ec0LYvmivgpDQ2qD2geC6bE9F3TbSGWAXhhsg",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -18,12 +17,15 @@ export const IMG_CDN = "https://image.tmdb.org/t/p/w500";
 export const BG_URL =
   "https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg";
 
-// /a3q8NkM8uTh9E23VsbUOdDSbBeN.jpg
 
-// https://image.tmdb.org/t/p/w500/a3q8NkM8uTh9E23VsbUOdDSbBeN.jpg
+
+
 
 export const SUPPORTED_LANGUAGES = [
   { identifier: "en", name: "English" },
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+// apikey
+export const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY;

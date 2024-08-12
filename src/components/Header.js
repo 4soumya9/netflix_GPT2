@@ -58,9 +58,11 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
+    // default is for mobile , md is for dekstop, sm is tab.
+    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between ">
+      {/* default is for mobile , sm(greater than small devices) is for tab (color will be blue) , and md(greater than medium devices) is for desktop (green)  bg-black sm:bg-blue-900 md:bg-green-900*/}
       {/* // <div className=" fixed hidden md:flex bg-gradient-to-b w-screen flex-col md:flex-row justify-between from-black px-8 py-2 z-50"> */}
-      <img className="w-44" src={LOGO} alt="Logo" />
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="Logo" />
 
       {user && (
         <div className="flex p-2">
@@ -81,7 +83,7 @@ const Header = () => {
             className="py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg"
             onClick={handleGPTSearchClick}
           >
-            {showGptSearch? "Home Page":"GPT Search"}
+            {showGptSearch ? "Home Page" : "GPT Search"}
           </button>
           <img className="w-12 h-12" src={AVATAR} alt="" />
           <button onClick={handleSignOut} className="font-bold text-white">
