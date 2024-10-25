@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { AVATAR, LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
-
+import Netflix_Logo_PMS from "../Images/Netflix_Logo_PMS.png"
+import userIcon from "../Images/userIcon.png"
 import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
@@ -62,7 +63,8 @@ const Header = () => {
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between ">
       {/* default is for mobile , sm(greater than small devices) is for tab (color will be blue) , and md(greater than medium devices) is for desktop (green)  bg-black sm:bg-blue-900 md:bg-green-900*/}
       {/* // <div className=" fixed hidden md:flex bg-gradient-to-b w-screen flex-col md:flex-row justify-between from-black px-8 py-2 z-50"> */}
-      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="Logo" />
+      <img className="w-44 mx-auto md:mx-0 " src={Netflix_Logo_PMS} alt="Logo" />
+      
 
       {user && (
         <div className="flex p-2 justify-between">
@@ -85,7 +87,7 @@ const Header = () => {
           >
             {showGptSearch ? "Home Page" : "GPT Search"}
           </button>
-          <img className="hidden md:block w-12 h-12" src={AVATAR} alt="" />
+          <img className="hidden md:block w-12 h-12" src={userIcon} alt="user_Icon" />
           <button onClick={handleSignOut} className="font-bold text-white">
             Sign Out
           </button>

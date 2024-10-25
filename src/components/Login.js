@@ -7,10 +7,11 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import backgroundImage from "../Images/backgroundImage.jpg";
 
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { BG_URL } from "../utils/constants";
+// import { BG_URL } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -100,9 +101,15 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img className="h-screen object-cover md:h-full"
-         src={BG_URL}
+        {/* <img className="h-screen object-cover md:h-full"
+         src={backgroundImage}
           alt="Logo"
+        /> */}
+          <img
+          // className="h-screen w-screen bg-cover bg-center"
+           className="h-screen w-screen object-cover md:h-full"
+          src={backgroundImage}
+          alt="Background Image"
         />
       </div>
       <form
