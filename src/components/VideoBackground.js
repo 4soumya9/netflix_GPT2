@@ -21,5 +21,5 @@ const VideoBackground = ({ movieId }) => {
       console.log(key);
     </div>
   );
-};
+};  
 export default VideoBackground;

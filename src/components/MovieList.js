@@ -17,6 +17,8 @@ const MovieList = ({ title, movies }) => {
               // key={movie.id}
               posterPath={movie.poster_path}
               // id={movie.id}
+              title={movie.title}
+              rating= {movie.vote_average}
             />
             </Link>
           ))}
