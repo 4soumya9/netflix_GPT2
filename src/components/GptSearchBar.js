@@ -49,7 +49,9 @@ const GptSearchBar = () => {
     //   // TODO: Write Error Handling
     // }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    // const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+
     const prompt =
       "Act as a movie recommendation system and suggest some movies for the query" +
       searchText.current.value +

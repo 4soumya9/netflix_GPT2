@@ -6,7 +6,7 @@ import { API_OPTIONS } from "../utils/constants";
 const useMovieTrailer = (movieId, flag) => {
   const dispatch = useDispatch();
 
-  const trailerVideo = useSelector((store) => store.movies.trailerVideo);
+  // const trailerVideo = useSelector((store) => store.movies.trailerVideo);
 
   // fetch trailer video and updating the store with trailer video data
   const getMovieVideos = async () => {
@@ -33,3 +33,8 @@ const useMovieTrailer = (movieId, flag) => {
   }, []);
 };
 export default useMovieTrailer;
+
+/*“The flag in useMovieTrailer acts as a switch to control where the trailer gets stored in Redux.
+ When flag is true, the trailer is stored in a dedicated overviewTrailer slice for the hero section. 
+ Otherwise, it only updates the general trailerVideo slice for regular playback.
+ This prevents overwriting data unnecessarily and keeps different UI sections independent.”*/
